@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+}
+
+
+.tested{
+  width: 10rem;
+  height: 15rem;
+}
+
+.datas{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.student-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: calc(100% - 1rem);
+  height: 14rem;
+  margin: 0.5rem;
+}
+
+.add-student-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  input{
+    width: 15rem;
+    margin: 1rem;
+  }
+}
+.add-student-action-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}

@@ -1,0 +1,53 @@
+
+<div class="screen">
+    <div class="student-container card">
+      <p class="errorMessage">{{errorMessage}}</p>
+      <div class="add-student-container card">
+        <div class="input-container">
+            <input [(ngModel)]="lessonCode" class="form-control" placeholder="Dərsin kodu"/>
+            <input [(ngModel)]="lessonClass" class="form-control" placeholder="Dərsə aid olan sinifi"/>
+            <input [(ngModel)]="lessonName" class="form-control" placeholder="Dərsin adı"/>
+        </div>
+        <div class="input-container">
+            <input [(ngModel)]="teacherName" class="form-control" placeholder="Müəllimin adı"/>
+            <input [(ngModel)]="teacherSurname" class="form-control" placeholder="Müəllimin soyadı"/>
+        </div>
+      </div>
+      <div class="add-student-action-container">
+        <button type="button" class="btn btn-success" (click)="sumbitLesson()">Əlavə et</button>
+      </div>
+    </div>
+    <div class="datas">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 card">
+            
+            <ng-container matColumnDef="code">
+              <mat-header-cell *matHeaderCellDef> Kodu </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.code}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Dərsin adı </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="class">
+              <mat-header-cell *matHeaderCellDef> Dərsə aid olan sinif </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.class}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="teacherName">
+              <mat-header-cell *matHeaderCellDef> Müəllimin adı </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.teacherName}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="teacherSurname">
+                <mat-header-cell *matHeaderCellDef> Müəllimin soyadı </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.teacherSurname}} </mat-cell>
+              </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+    </div>
+</div>
+

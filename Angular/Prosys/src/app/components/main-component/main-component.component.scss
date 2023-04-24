@@ -1,0 +1,39 @@
+.flex-screen{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-self: center;
+    align-content: center;
+    flex-direction: row;
+}
+.flex-content{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex-item{
+    width: 15rem;
+    height: 10rem;
+    svg{
+        width: 5rem;
+    }
+    p{
+        font-weight: 600;
+    }
+}
+
+.clickable-content{
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.clickable-content:hover{
+    background-color: #1915f3;
+    color: white;
+    svg {
+        fill: white;
+    }
+}

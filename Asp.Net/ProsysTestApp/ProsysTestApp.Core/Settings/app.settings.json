@@ -1,0 +1,5 @@
+{
+  "DatabaseSetting": {
+    "ApiDbConnectionString": "Server=45.136.6.187;Database=Prosys;User Id=EminTestNewUser;Password=Emin1234.;TrustServerCertificate=True"
+  }
+}

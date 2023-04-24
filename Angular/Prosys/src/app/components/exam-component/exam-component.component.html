@@ -1,0 +1,47 @@
+
+<div class="screen">
+    <div class="student-container card">
+      <p class="errorMessage">{{errorMessage}}</p>
+      <div class="add-student-container card">
+        <div class="input-container">
+            <input [(ngModel)]="lessonCode" class="form-control" placeholder="Dərsin kodu"/>
+            <input [(ngModel)]="studentNumber" class="form-control" placeholder="Şagirdin nömrəsi"/>
+        </div>
+        <div class="input-container">
+            <input [(ngModel)]="examDate" type="date" class="form-control" placeholder="İmtahan tarixi"/>
+            <input [(ngModel)]="examResult" class="form-control" placeholder="İmtahan qiyməti"/>
+        </div>
+      </div>
+      <div class="add-student-action-container">
+        <button type="button" class="btn btn-success" (click)="sumbitExam()">Əlavə et</button>
+      </div>
+    </div>
+    <div class="datas">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 card">
+            
+            <ng-container matColumnDef="lessonCode">
+              <mat-header-cell *matHeaderCellDef> Dərs kodu </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.lessonCode}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="studentNumber">
+              <mat-header-cell *matHeaderCellDef> Şagird nömrəsi </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.studentNumber}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="examDate">
+              <mat-header-cell *matHeaderCellDef> İmtahan vaxtı</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.examDate}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="examResult">
+              <mat-header-cell *matHeaderCellDef> İmtahan nəticəsi </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.examResult}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+    </div>
+</div>
+
